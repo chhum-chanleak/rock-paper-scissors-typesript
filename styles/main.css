@@ -15,3 +15,15 @@
   line-height: 1.5;
   word-spacing: 0.2rem;
 }
+
+header {
+  padding: var(--spacing-padding);
+  display: flex;
+  justify-content: center;
+
+  & ul.human-choices {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-gap);
+  }
+}
