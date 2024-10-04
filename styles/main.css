@@ -27,3 +27,10 @@ header {
     gap: var(--spacing-gap);
   }
 }
+
+button {
+  padding: var(--spacing-padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  width: 100px;
+}
