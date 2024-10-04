@@ -58,8 +58,15 @@ class Human implements Player {
     }
   }
 
-  handleScissors(): void {
-      
+  handleScissors(): string {
+    switch(getRandomChoice()) {
+      case 'rock':
+        return 'lose';
+      case 'paper':
+        return 'win';
+      default:
+        return 'draw';
+    }
   }
 }
 

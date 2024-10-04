@@ -38,6 +38,14 @@ class Human {
         }
     }
     handleScissors() {
+        switch (getRandomChoice()) {
+            case 'rock':
+                return 'lose';
+            case 'paper':
+                return 'win';
+            default:
+                return 'draw';
+        }
     }
 }
 const human = new Human('Chhum', 0);
