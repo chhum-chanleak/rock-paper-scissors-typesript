@@ -47,8 +47,15 @@ class Human implements Player {
     }
   }
 
-  handlePaper(): void {
-      
+  handlePaper(): string {
+    switch(getRandomChoice()) {
+      case 'rock':
+        return 'win';
+      case 'paper':
+        return 'draw';
+      default:
+        return 'lose';
+    }
   }
 
   handleScissors(): void {

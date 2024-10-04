@@ -28,6 +28,14 @@ class Human {
         }
     }
     handlePaper() {
+        switch (getRandomChoice()) {
+            case 'rock':
+                return 'win';
+            case 'paper':
+                return 'draw';
+            default:
+                return 'lose';
+        }
     }
     handleScissors() {
     }
