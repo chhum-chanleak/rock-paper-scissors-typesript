@@ -56,6 +56,8 @@ class Human implements Player {
   }
 }
 
+const human = new Human('Chhum', 0);
+
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = (): string => {
   let choice: string;

@@ -15,3 +15,17 @@ FUNCTION getRandomChoice():
   RETURN choice
 ENDFUNCTION
 <-
+
+->
+FUNCTION handleRock()
+  SWITCH (getRandomChoice()):
+    CASE 'rock':
+      RETURN 'draw'
+    CASE 'paper':
+      RETURN 'lose'
+    DEFAULT:
+      RETURN 'win'
+  ENDSWITCH
+ENDFUNCTION
+<-
+
