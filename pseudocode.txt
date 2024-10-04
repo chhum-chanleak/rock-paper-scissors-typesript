@@ -1,0 +1,17 @@
+FUNCTION handleRock():
+
+ENDFUNCTION
+<-
+
+->
+FUNCTION getRandomChoice():
+  INIT choice
+  INIT randomNum = Math.random()
+
+  IF randomNum >= 0 AND randomNum <= 0.33 THEN SET choice = 'rock'
+  ELSEIF randomNum >= 33 AND randomNum <= 0.66 THEN SET choice = 'paper'
+  OTHERWISE SET choice = 'scissors'
+
+  RETURN choice
+ENDFUNCTION
+<-
