@@ -34,6 +34,18 @@ header {
     display: flex;
     gap: var(--spacing-gap);
   }
+
+  & .btn.rock {
+    background: #930202;
+  }
+
+  & .btn.paper {
+    background: #1f7801;
+  }
+
+  & .btn.scissors {
+    background: #170482;
+  }
 }
 
 main {
@@ -86,4 +98,6 @@ button {
   border: var(--border);
   border-radius: var(--border-radius);
   width: 100px;
+  color: #fff;
+  cursor: pointer;
 }
