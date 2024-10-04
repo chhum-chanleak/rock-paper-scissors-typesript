@@ -73,6 +73,7 @@ footer {
   & img {
     height: auto;
     width: 100px;
+    cursor: pointer;
   }
 }
 
