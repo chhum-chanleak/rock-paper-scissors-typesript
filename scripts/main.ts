@@ -83,6 +83,7 @@ class Computer {
 }
 
 const human = new Human('Chhum', 0);
+const computer = new Computer(0);
 
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = (): string => {
