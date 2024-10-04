@@ -18,30 +18,36 @@ class Human {
         this._score = score;
     }
     handleRock() {
-        switch (getRandomChoice()) {
+        switch (computer.choice) {
             case 'rock':
                 return 'draw';
             case 'paper':
+                computer.increaseScore();
                 return 'lose';
             default:
+                this._score += 1;
                 return 'win';
         }
     }
     handlePaper() {
-        switch (getRandomChoice()) {
+        switch (computer.choice) {
             case 'rock':
+                this._score += 1;
                 return 'win';
             case 'paper':
                 return 'draw';
             default:
+                computer.increaseScore();
                 return 'lose';
         }
     }
     handleScissors() {
-        switch (getRandomChoice()) {
+        switch (computer.choice) {
             case 'rock':
+                computer.increaseScore();
                 return 'lose';
             case 'paper':
+                this._score += 1;
                 return 'win';
             default:
                 return 'draw';
