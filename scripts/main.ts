@@ -12,8 +12,8 @@ interface Player {
 }
 
 class Human implements Player {
-  private _name: string;
-  private _score: number = 0;
+  _name: string;
+  _score: number = 0;
 
   constructor(name: string, score: number) {
     this._name = name;
