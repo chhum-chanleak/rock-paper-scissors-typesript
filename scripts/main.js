@@ -48,6 +48,14 @@ class Human {
         }
     }
 }
+class Computer {
+    constructor(score) {
+        this._score = score;
+    }
+    get choice() {
+        return getRandomChoice();
+    }
+}
 const human = new Human('Chhum', 0);
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = () => {

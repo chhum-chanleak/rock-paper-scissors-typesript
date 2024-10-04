@@ -70,6 +70,18 @@ class Human implements Player {
   }
 }
 
+class Computer {
+  _score: number;
+
+  constructor(score: number) {
+    this._score = score;
+  }
+
+  get choice(): string {
+    return getRandomChoice();
+  }
+}
+
 const human = new Human('Chhum', 0);
 
 // Generate random choice(rock, paper, or scissor)
