@@ -1,11 +1,11 @@
 interface Player {
-  name: string;
-  score: number;
+  _name: string;
+  _score: number;
 
-  getName(): string;
-  setName(name: string): void;
-  getScore(): number;
-  setScore(score: number): void;
+  get name(): string;
+  set name(name: string);
+  get score(): number;
+  set score(score: number);
   handleRock(): void;
   handlePaper(): void;
   handleScissors(): void;
