@@ -6,7 +6,39 @@
   <title>Rock paper scissors TypeScript</title>
 </head>
 <body>
+  <header>
+    <ul class="human-choices">
+      <li><button class="btn rock">ROCK</button></li>
+      <li><button class="btn paper">PAPER</button></li>
+      <li><button class="btn scissors">SCISSORS</button></li>
+    </ul>
+  </header>
 
+  <main>
+    <h2>Best of 5</h2>
+    <div class="ring">
+      <div class="row first">
+        <span class="human-score">Human score: </span>
+        <span class="winner-message"></span>
+        <span class="computer-score">Computer score: </span>
+      </div>
+      <div class="row second">
+        <figure class="human-side">
+          <img src="" alt="human choice">
+          <figcaption class="figure-caption human"></figcaption>
+        </figure>
+        <span class="vs">VS</span>
+        <figure class="computer-side">
+          <img src="" alt="computer choice">
+          <figcaption class="figure-caption computer"></figcaption>
+        </figure>
+      </div>
+    </div>
+    <span class="set-message"></span>
+  </main>
+
+  <footer><img src="" alt="github"></footer>
+  
   <script src="scripts/main.js"></script>
 </body>
 </html>
