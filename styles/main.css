@@ -69,6 +69,11 @@ footer {
   padding: var(--spacing-padding);
   display: flex;
   justify-content: center;
+
+  & img {
+    height: auto;
+    width: 100px;
+  }
 }
 
 button {
