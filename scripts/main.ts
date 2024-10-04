@@ -63,7 +63,7 @@ const getRandomChoice = (): string => {
 
   if (randomNum >= 0 && randomNum <= 0.33) {
     choice = 'rock';
-  } else if (randomNum >= 33 && randomNum <= 0.66) {
+  } else if (randomNum >= 0.33 && randomNum <= 0.66) {
     choice = 'paper';
   } else {
     choice = 'scissors';
