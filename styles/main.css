@@ -55,6 +55,13 @@ main {
   }
 }
 
+footer {
+  border: var(--border);
+  padding: var(--spacing-padding);
+  display: flex;
+  justify-content: center;
+}
+
 button {
   padding: var(--spacing-padding);
   border: var(--border);
