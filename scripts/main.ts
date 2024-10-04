@@ -36,8 +36,15 @@ class Human implements Player {
     this._score = score;
   }
 
-  handleRock(): void {
-      
+  handleRock(): string {
+    switch(getRandomChoice()) {
+      case 'rock':
+        return 'draw';
+      case 'paper':
+        return 'lose';
+      default:
+        return 'win';
+    }
   }
 
   handlePaper(): void {
