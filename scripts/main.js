@@ -79,3 +79,5 @@ const getRandomChoice = () => {
     }
     return choice;
 };
+// Show bother players' score
+const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
