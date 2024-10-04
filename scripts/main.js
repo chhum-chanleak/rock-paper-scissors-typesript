@@ -61,6 +61,9 @@ class Computer {
     get choice() {
         return getRandomChoice();
     }
+    increaseScore() {
+        this._score += 1;
+    }
 }
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
@@ -79,5 +82,5 @@ const getRandomChoice = () => {
     }
     return choice;
 };
-// Show bother players' score
+// Show both players' score
 const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);

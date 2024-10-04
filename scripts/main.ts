@@ -88,6 +88,10 @@ class Computer {
   get choice(): string {
     return getRandomChoice();
   }
+
+  increaseScore(): void {
+    this._score += 1;
+  }
 }
 
 const human = new Human('Chhum', 0);
