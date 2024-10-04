@@ -77,6 +77,14 @@ class Computer {
     this._score = score;
   }
 
+  get score(): number {
+    return this._score;
+  }
+
+  set score(score: number) {
+    this._score = score;
+  }
+
   get choice(): string {
     return getRandomChoice();
   }
