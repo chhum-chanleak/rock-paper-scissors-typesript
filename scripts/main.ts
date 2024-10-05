@@ -41,45 +41,67 @@ class Human implements Player {
     this._score += 1;
   }
 
-  handleRock(): string {
+  handleRock(): void {
     const computerChoice = getRandomChoice();
+
+    console.log(`H: rock   vs   C: ${computerChoice}`);
+
     switch(computerChoice) {
       case 'rock':
-        return 'draw';
+        console.log('draw');
+        break;
       case 'paper':
+        console.log('Computer wins.');
         computer.increaseScore();
-        return 'lose';
+        showPlayersScore();
+        break;
       default:
-        this.increaseScore();
-        return 'win';
+        console.log('Human wins.');
+        human.increaseScore();
+        showPlayersScore();
+        break;
     }
   }
 
-  handlePaper(): string {
+  handlePaper(): void {
     const computerChoice = getRandomChoice();
+
+    console.log(`H: paper   vs   C: ${computerChoice}`);
+
     switch(computerChoice) {
       case 'rock':
-        this.increaseScore();
-        return 'win';
-      case 'paper':
-        return 'draw';
-      default:
+        console.log('Computer wins.');
         computer.increaseScore();
-        return 'lose';
+        showPlayersScore();
+        break;
+      case 'paper':
+        console.log('draw');
+      default:
+        console.log('Human wins.');
+        human.increaseScore();
+        showPlayersScore();
+        break;
     }
   }
 
-  handleScissors(): string {
+  handleScissors(): void {
     const computerChoice = getRandomChoice();
+
+    console.log(`H: scissors   vs   C: ${computerChoice}`);
+
     switch(computerChoice) {
       case 'rock':
-        computer.increaseScore();
-        return 'lose';
+        console.log('Human wins.');
+        human.increaseScore();
+        showPlayersScore();
+        break;
       case 'paper':
-        this.increaseScore();
-        return 'win';
+        console.log('Computer wins.');
+        computer.increaseScore();
+        showPlayersScore();
+        break;
       default:
-        return 'draw';
+        console.log('draw');
     }
   }
 }

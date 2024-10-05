@@ -22,15 +22,21 @@ class Human {
     }
     handleRock() {
         const computerChoice = getRandomChoice();
+        console.log(`H: rock   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
-                return 'draw';
+                console.log('draw');
+                break;
             case 'paper':
+                console.log('Computer wins.');
                 computer.increaseScore();
-                return 'lose';
+                showPlayersScore();
+                break;
             default:
-                this.increaseScore();
-                return 'win';
+                console.log('Human wins.');
+                human.increaseScore();
+                showPlayersScore();
+                break;
         }
     }
     handlePaper() {
