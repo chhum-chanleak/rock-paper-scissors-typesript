@@ -200,6 +200,10 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 
+const rockPicture = new Picture("../assets/rock.jpg");
+const paperPicture = new Picture("../assets/paper.webp");
+const scissorsPicture = new Picture("../assets/scissors.jpg");
+
 // Buttons
 namespace myButtons {
   // You must 'export' these variables before you can access them.
