@@ -17,6 +17,9 @@ class Human {
     set score(score) {
         this._score = score;
     }
+    increaseScore() {
+        this._score += 1;
+    }
     handleRock() {
         switch (computer.choice) {
             case 'rock':
@@ -25,14 +28,14 @@ class Human {
                 computer.increaseScore();
                 return 'lose';
             default:
-                this._score += 1;
+                this.increaseScore();
                 return 'win';
         }
     }
     handlePaper() {
         switch (computer.choice) {
             case 'rock':
-                this._score += 1;
+                this.increaseScore();
                 return 'win';
             case 'paper':
                 return 'draw';
@@ -47,7 +50,7 @@ class Human {
                 computer.increaseScore();
                 return 'lose';
             case 'paper':
-                this._score += 1;
+                this.increaseScore();
                 return 'win';
             default:
                 return 'draw';
@@ -102,7 +105,7 @@ const getRandomChoice = () => {
 };
 // Show both players' score
 const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
-// Apply a click event to 
+// Apply a click event to
 const addClickEvent = (node) => {
     const classAttr = node.getAttribute('class');
     if (classAttr != null) {

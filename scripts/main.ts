@@ -48,7 +48,7 @@ class Human implements Player {
         computer.increaseScore();
         return 'lose';
       default:
-        this._score += 1;
+        this.increaseScore();
         return 'win';
     }
   }
@@ -56,7 +56,7 @@ class Human implements Player {
   handlePaper(): string {
     switch(computer.choice) {
       case 'rock':
-        this._score += 1;
+        this.increaseScore();
         return 'win';
       case 'paper':
         return 'draw';
@@ -72,7 +72,7 @@ class Human implements Player {
         computer.increaseScore();
         return 'lose';
       case 'paper':
-        this._score += 1;
+        this.increaseScore();
         return 'win';
       default:
         return 'draw';
@@ -162,4 +162,3 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
 
   throw new Error("Attribute 'class' not found.");
 };
-
