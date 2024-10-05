@@ -138,3 +138,24 @@ const getRandomChoice = (): string => {
 
 // Show both players' score
 const showPlayersScore = (): void => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
+
+// Apply a click event to
+const addClickEvent = (node: Element): void | ErrorConstructor => {
+  const classAttr = node.getAttribute('class');
+
+  if (classAttr != null) {
+    if (classAttr.includes('rock')) {
+      node.addEventListener('click', human.handleRock);
+      return;
+    } else if (classAttr.includes('paper')) {
+      node.addEventListener('click', human.handlePaper);
+      return;
+    } else {
+      node.addEventListener('click', human.handleScissors);
+      return;
+    }
+  }
+
+  throw new Error("Attribute 'class' not found.");
+};
+
