@@ -103,6 +103,15 @@ class Button {
         throw new Error("Selector not found.");
     }
 }
+class Picture {
+    constructor(url) {
+        this._url = url;
+    }
+    showPicture(selector) {
+        const destination = document.querySelector(selector);
+        destination.src = this._url;
+    }
+}
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = () => {
     let choice;

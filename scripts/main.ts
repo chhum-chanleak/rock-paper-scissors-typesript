@@ -145,6 +145,20 @@ class Button {
   }
 }
 
+class Picture {
+  _url: string;
+
+  constructor(url: string) {
+    this._url = url;
+  }
+
+  showPicture(selector: string): void  {
+    const destination = document.querySelector(selector) as HTMLImageElement;
+    
+    destination.src = this._url;
+  }
+}
+
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = (): string => {
   let choice: string;
