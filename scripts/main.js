@@ -70,9 +70,6 @@ class Computer {
     set score(score) {
         this._score = score;
     }
-    get choice() {
-        return getRandomChoice();
-    }
     increaseScore() {
         this._score += 1;
     }

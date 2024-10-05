@@ -98,10 +98,6 @@ class Computer {
     this._score = score;
   }
 
-  get choice(): string {
-    return getRandomChoice();
-  }
-
   increaseScore(): void {
     this._score += 1;
   }
