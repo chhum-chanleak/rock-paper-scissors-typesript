@@ -6,6 +6,7 @@ interface Player {
   set name(name: string);
   get score(): number;
   set score(score: number);
+  increaseScore(): void;
   handleRock(): void;
   handlePaper(): void;
   handleScissors(): void;
