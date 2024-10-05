@@ -100,6 +100,24 @@ class Computer {
   }
 }
 
+class Button {
+  selector: string;
+
+  constructor(selector: string) {
+    this.selector = selector;
+  }
+
+  get node(): Element {
+    const button = document.querySelector(this.selector);
+
+    if (button != null) {
+      return button;
+    }
+    
+    throw new Error("Selector not found.");
+  }
+}
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 

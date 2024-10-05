@@ -71,6 +71,18 @@ class Computer {
         this._score += 1;
     }
 }
+class Button {
+    constructor(selector) {
+        this.selector = selector;
+    }
+    get node() {
+        const button = document.querySelector(this.selector);
+        if (button != null) {
+            return button;
+        }
+        throw new Error("Selector not found.");
+    }
+}
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 // Generate random choice(rock, paper, or scissor)
