@@ -44,15 +44,16 @@ class Human {
         console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
-                console.log('Computer wins.');
-                computer.increaseScore();
+                console.log('Human wins.');
+                human.increaseScore();
                 showPlayersScore();
                 break;
             case 'paper':
                 console.log('draw');
+                break;
             default:
-                console.log('Human wins.');
-                human.increaseScore();
+                console.log('Computer wins.');
+                computer.increaseScore();
                 showPlayersScore();
                 break;
         }
@@ -62,13 +63,13 @@ class Human {
         console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
-                console.log('Human wins.');
-                human.increaseScore();
+                console.log('Computer wins.');
+                computer.increaseScore();
                 showPlayersScore();
                 break;
             case 'paper':
-                console.log('Computer wins.');
-                computer.increaseScore();
+                console.log('Human wins.');
+                human.increaseScore();
                 showPlayersScore();
                 break;
             default:

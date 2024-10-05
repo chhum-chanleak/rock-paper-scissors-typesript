@@ -71,14 +71,15 @@ class Human implements Player {
     switch(computerChoice) {
       case 'rock':
         console.log('Human wins.');
-        computer.increaseScore();
+        human.increaseScore();
         showPlayersScore();
         break;
       case 'paper':
         console.log('draw');
+        break;
       default:
         console.log('Computer wins.');
-        human.increaseScore();
+        computer.increaseScore();
         showPlayersScore();
         break;
     }
@@ -91,13 +92,13 @@ class Human implements Player {
 
     switch(computerChoice) {
       case 'rock':
-        console.log('Computer wins.');
-        human.increaseScore();
+        console.log('Computer wins.');        
+        computer.increaseScore();
         showPlayersScore();
         break;
       case 'paper':
         console.log('Human wins.');
-        computer.increaseScore();
+        human.increaseScore();
         showPlayersScore();
         break;
       default:
