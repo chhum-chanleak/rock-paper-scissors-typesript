@@ -36,6 +36,10 @@ class Human implements Player {
     this._score = score;
   }
 
+  increaseScore(): void {
+    this._score += 1;
+  }
+
   handleRock(): string {
     switch(computer.choice) {
       case 'rock':
