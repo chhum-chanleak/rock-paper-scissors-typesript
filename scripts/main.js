@@ -21,6 +21,7 @@ class Human {
         this._score += 1;
     }
     handleRock() {
+        // Show picture of rock on human side
         rockPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
@@ -41,6 +42,8 @@ class Human {
         }
     }
     handlePaper() {
+        // Show picture of paper on human side
+        paperPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
@@ -60,6 +63,8 @@ class Human {
         }
     }
     handleScissors() {
+        // Show picture of scissors on human side
+        scissorsPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {

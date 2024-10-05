@@ -93,7 +93,7 @@ class Human implements Player {
 
   handleScissors(): void {
     // Show picture of scissors on human side
-    paperPicture.showPicture("figure.human-side img");
+    scissorsPicture.showPicture("figure.human-side img");
 
     const computerChoice = getRandomChoice();
 
