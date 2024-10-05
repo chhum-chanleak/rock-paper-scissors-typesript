@@ -184,3 +184,8 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
 
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
+
+// Buttons
+const rock = new Button('.btn.rock');
+const paper = new Button('.btn.paper');
+const scissors = new Button('.btn.scissors');

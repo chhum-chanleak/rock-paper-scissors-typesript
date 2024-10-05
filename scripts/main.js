@@ -41,28 +41,38 @@ class Human {
     }
     handlePaper() {
         const computerChoice = getRandomChoice();
+        console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
-                this.increaseScore();
-                return 'win';
-            case 'paper':
-                return 'draw';
-            default:
+                console.log('Computer wins.');
                 computer.increaseScore();
-                return 'lose';
+                showPlayersScore();
+                break;
+            case 'paper':
+                console.log('draw');
+            default:
+                console.log('Human wins.');
+                human.increaseScore();
+                showPlayersScore();
+                break;
         }
     }
     handleScissors() {
         const computerChoice = getRandomChoice();
+        console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
-                computer.increaseScore();
-                return 'lose';
+                console.log('Human wins.');
+                human.increaseScore();
+                showPlayersScore();
+                break;
             case 'paper':
-                this.increaseScore();
-                return 'win';
+                console.log('Computer wins.');
+                computer.increaseScore();
+                showPlayersScore();
+                break;
             default:
-                return 'draw';
+                console.log('draw');
         }
     }
 }
@@ -130,3 +140,7 @@ const addClickEvent = (node) => {
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
+// Buttons
+const rock = new Button('.btn.rock');
+const paper = new Button('.btn.paper');
+const scissors = new Button('.btn.scissors');
