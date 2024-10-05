@@ -148,3 +148,7 @@ var myButtons;
     myButtons.paper = new Button('.btn.paper');
     myButtons.scissors = new Button('.btn.scissors');
 })(myButtons || (myButtons = {}));
+// Apply event to each button.
+addClickEvent(myButtons.rock.node);
+addClickEvent(myButtons.paper.node);
+addClickEvent(myButtons.scissors.node);

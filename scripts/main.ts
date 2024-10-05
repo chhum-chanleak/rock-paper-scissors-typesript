@@ -70,14 +70,14 @@ class Human implements Player {
 
     switch(computerChoice) {
       case 'rock':
-        console.log('Computer wins.');
+        console.log('Human wins.');
         computer.increaseScore();
         showPlayersScore();
         break;
       case 'paper':
         console.log('draw');
       default:
-        console.log('Human wins.');
+        console.log('Computer wins.');
         human.increaseScore();
         showPlayersScore();
         break;
@@ -91,12 +91,12 @@ class Human implements Player {
 
     switch(computerChoice) {
       case 'rock':
-        console.log('Human wins.');
+        console.log('Computer wins.');
         human.increaseScore();
         showPlayersScore();
         break;
       case 'paper':
-        console.log('Computer wins.');
+        console.log('Human wins.');
         computer.increaseScore();
         showPlayersScore();
         break;
@@ -192,3 +192,4 @@ namespace myButtons {
   export const paper = new Button('.btn.paper');
   export const scissors = new Button('.btn.scissors');
 }
+
