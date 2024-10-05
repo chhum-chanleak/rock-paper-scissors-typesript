@@ -41,7 +41,8 @@ class Human implements Player {
   }
 
   handleRock(): string {
-    switch(computer.choice) {
+    const computerChoice = getRandomChoice();
+    switch(computerChoice) {
       case 'rock':
         return 'draw';
       case 'paper':
@@ -54,7 +55,8 @@ class Human implements Player {
   }
 
   handlePaper(): string {
-    switch(computer.choice) {
+    const computerChoice = getRandomChoice();
+    switch(computerChoice) {
       case 'rock':
         this.increaseScore();
         return 'win';
@@ -67,7 +69,8 @@ class Human implements Player {
   }
 
   handleScissors(): string {
-    switch(computer.choice) {
+    const computerChoice = getRandomChoice();
+    switch(computerChoice) {
       case 'rock':
         computer.increaseScore();
         return 'lose';
@@ -122,9 +125,6 @@ class Button {
   }
 }
 
-const human = new Human('Chhum', 0);
-const computer = new Computer(0);
-
 // Generate random choice(rock, paper, or scissor)
 const getRandomChoice = (): string => {
   let choice: string;
@@ -162,3 +162,6 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
 
   throw new Error("Attribute 'class' not found.");
 };
+
+const human = new Human('Chhum', 0);
+const computer = new Computer(0);
