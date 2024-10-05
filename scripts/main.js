@@ -21,6 +21,7 @@ class Human {
         this._score += 1;
     }
     handleRock() {
+        rockPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
         switch (computerChoice) {
@@ -150,6 +151,9 @@ const addClickEvent = (node) => {
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
+const rockPicture = new Picture("../assets/rock.jpg");
+const paperPicture = new Picture("../assets/paper.webp");
+const scissorsPicture = new Picture("../assets/scissors.jpg");
 // Buttons
 var myButtons;
 (function (myButtons) {
