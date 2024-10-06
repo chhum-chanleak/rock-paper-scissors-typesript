@@ -264,7 +264,7 @@ namespace myButtons {
   export const scissors = new Button('.btn.scissors');
 }
 
-// Apply event to each button.
+// Apply handle click event to each button.
 addClickEvent(myButtons.rock.node);
 addClickEvent(myButtons.paper.node);
 addClickEvent(myButtons.scissors.node);

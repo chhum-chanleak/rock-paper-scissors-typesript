@@ -165,13 +165,6 @@ class Picture {
         destination.src = this._url;
     }
 }
-// Update players' score on the '.ring'
-const updateScore = () => {
-    const humanSpanValue = document.querySelector('span.human-score > span.value');
-    const computerSpanValue = document.querySelector('span.computer-score > span.value');
-    humanSpanValue.textContent = `${human.score}`;
-    computerSpanValue.textContent = `${computer.score}`;
-};
 // Show both players' score
 const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
 // Apply a click event to
@@ -193,6 +186,13 @@ const addClickEvent = (node) => {
     }
     throw new Error("Attribute 'class' not found.");
 };
+// Update players' score on the '.ring'
+const updateScore = () => {
+    const humanSpanValue = document.querySelector('span.human-score > span.value');
+    const computerSpanValue = document.querySelector('span.computer-score > span.value');
+    humanSpanValue.textContent = `${human.score}`;
+    computerSpanValue.textContent = `${computer.score}`;
+};
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
@@ -207,7 +207,7 @@ var myButtons;
     myButtons.paper = new Button('.btn.paper');
     myButtons.scissors = new Button('.btn.scissors');
 })(myButtons || (myButtons = {}));
-// Apply event to each button.
+// Apply handle click event to each button.
 addClickEvent(myButtons.rock.node);
 addClickEvent(myButtons.paper.node);
 addClickEvent(myButtons.scissors.node);
