@@ -199,6 +199,10 @@ const updateScore = () => {
     const computerSpanValue = document.querySelector('span.computer-score > span.value');
     humanSpanValue.textContent = `${human.score}`;
     computerSpanValue.textContent = `${computer.score}`;
+    // Remove event listeners from buttons when the game is set
+    if (isSet()) {
+        removeClickListeners(myButtons.rock.node, myButtons.paper.node, myButtons.scissors.node);
+    }
 };
 // Show a congratulations message when either one of the player's is 3
 const handleSetMessage = () => {
@@ -233,6 +237,16 @@ const removeClickListeners = (...elements) => {
         }
         else {
             elements[i].removeEventListener('click', human.handleScissors);
+        }
+    }
+};
+// Hide buttons when game is set.
+const hideButtons = () => {
+    const buttons = document.querySelectorAll('header .btn');
+    if (isSet()) {
+        for (let i = 0; i < buttons.length; i += 1) {
+            const button = buttons[i];
+            button.style.display = 'none';
         }
     }
 };

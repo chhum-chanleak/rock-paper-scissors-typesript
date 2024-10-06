@@ -253,6 +253,11 @@ const updateScore = (): void => {
 
   humanSpanValue.textContent = `${human.score}`;
   computerSpanValue.textContent = `${computer.score}`;
+
+  // Remove event listeners from buttons when the game is set
+  if (isSet()) {
+    removeClickListeners(myButtons.rock.node, myButtons.paper.node, myButtons.scissors.node);
+  }
 };
 
 // Show a congratulations message when either one of the player's is 3
