@@ -189,6 +189,16 @@ class Picture {
     
     destination.src = this._url;
   }
+
+  showPictureByChoice = (): void => {  
+    if (computer.choice === 'rock') {
+      rockPicture.showPicture('figure.computer-side img');
+    } else if (computer.choice === 'paper') {
+      paperPicture.showPicture('figure.computer-side img');
+    } else {
+      scissorsPicture.showPicture('figure.computer-side img');
+    }
+  }
 }
 
 // Show both players' score

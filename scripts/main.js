@@ -132,6 +132,17 @@ class Button {
 }
 class Picture {
     constructor(url) {
+        this.showPictureByChoice = () => {
+            if (computer.choice === 'rock') {
+                rockPicture.showPicture('figure.computer-side img');
+            }
+            else if (computer.choice === 'paper') {
+                paperPicture.showPicture('figure.computer-side img');
+            }
+            else {
+                scissorsPicture.showPicture('figure.computer-side img');
+            }
+        };
         this._url = url;
     }
     showPicture(selector) {
