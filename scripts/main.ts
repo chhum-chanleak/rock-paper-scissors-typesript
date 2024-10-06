@@ -231,6 +231,22 @@ class Picture {
       scissorsPicture.showPicture('figure.computer-side img');
     }
   }
+
+  // Set figure caption according to image
+  setFigureCaption = (selector: string): void => {
+    const figureCaption = document.querySelector(selector) as HTMLElement;
+    const img = figureCaption.previousElementSibling as HTMLImageElement;
+
+    if (img.src) {
+      if (img.src.includes('rock')) {
+        figureCaption.textContent = 'ROCK';
+      } else if (img.src.includes('paper')) {
+        figureCaption.textContent = 'PAPER';
+      } else {
+        figureCaption.textContent = 'SCISSORS';
+      }
+    }
+  };
 }
 
 // Show both players' score

@@ -175,6 +175,22 @@ class Picture {
                 scissorsPicture.showPicture('figure.computer-side img');
             }
         };
+        // Set figure caption according to image
+        this.setFigureCaption = (selector) => {
+            const figureCaption = document.querySelector(selector);
+            const img = figureCaption.previousElementSibling;
+            if (img.src) {
+                if (img.src.includes('rock')) {
+                    figureCaption.textContent = 'ROCK';
+                }
+                else if (img.src.includes('paper')) {
+                    figureCaption.textContent = 'PAPER';
+                }
+                else {
+                    figureCaption.textContent = 'SCISSORS';
+                }
+            }
+        };
         this._url = url;
     }
     showPicture(selector) {
