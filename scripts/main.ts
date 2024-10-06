@@ -132,6 +132,14 @@ class Computer {
     this._score = score;
   }
 
+  get choice(): string {
+    return this._choice;
+  }
+
+  set choice(choice: string) {
+    this._choice = choice;
+  }
+
   increaseScore(): void {
     this._score += 1;
   }
