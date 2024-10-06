@@ -25,7 +25,7 @@ class Human {
         rockPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
         // Show a random picture on computer side
-        pictureMethods.showPictureByChoice();
+        pictureMethods.showPictureByComputerChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -56,7 +56,7 @@ class Human {
         paperPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
         // Show a random picture on computer side
-        pictureMethods.showPictureByChoice();
+        pictureMethods.showPictureByComputerChoice();
         console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -87,7 +87,7 @@ class Human {
         scissorsPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
         // Show a random picture on computer side
-        pictureMethods.showPictureByChoice();
+        pictureMethods.showPictureByComputerChoice();
         console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -164,7 +164,7 @@ class Button {
 class Picture {
     constructor(url) {
         // Show picture on the computer side according to the 'computer.choice'.
-        this.showPictureByChoice = () => {
+        this.showPictureByComputerChoice = () => {
             if (computer.choice === 'rock') {
                 rockPicture.showPicture('figure.computer-side img');
             }

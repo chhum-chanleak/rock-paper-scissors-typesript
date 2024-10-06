@@ -48,7 +48,7 @@ class Human implements Player {
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
-    pictureMethods.showPictureByChoice();
+    pictureMethods.showPictureByComputerChoice();
     console.log(`H: rock   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
@@ -83,7 +83,7 @@ class Human implements Player {
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
-    pictureMethods.showPictureByChoice();
+    pictureMethods.showPictureByComputerChoice();
     console.log(`H: paper   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
@@ -118,7 +118,7 @@ class Human implements Player {
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
-    pictureMethods.showPictureByChoice();
+    pictureMethods.showPictureByComputerChoice();
     console.log(`H: scissors   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
@@ -222,7 +222,7 @@ class Picture {
   }
 
   // Show picture on the computer side according to the 'computer.choice'.
-  showPictureByChoice = (): void => {  
+  showPictureByComputerChoice = (): void => {  
     if (computer.choice === 'rock') {
       rockPicture.showPicture('figure.computer-side img');
     } else if (computer.choice === 'paper') {
