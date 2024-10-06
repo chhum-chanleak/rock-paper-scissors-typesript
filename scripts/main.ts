@@ -259,7 +259,7 @@ const updateScore = (): void => {
 const handleSetMessage = (): void => {
   const setMessage = document.querySelector('.set-message') as Element;
 
-  if (human.score === 3 || computer.score === 3) {
+  if (isSet()) {
     // When human wins
     if (human.score > computer.score) {
       setMessage.textContent = `Congratulations! Human wins.`;
@@ -316,4 +316,3 @@ namespace myButtons {
 addClickEvent(myButtons.rock.node);
 addClickEvent(myButtons.paper.node);
 addClickEvent(myButtons.scissors.node);
-

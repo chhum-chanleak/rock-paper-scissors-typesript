@@ -203,7 +203,7 @@ const updateScore = () => {
 // Show a congratulations message when either one of the player's is 3
 const handleSetMessage = () => {
     const setMessage = document.querySelector('.set-message');
-    if (human.score === 3 || computer.score === 3) {
+    if (isSet()) {
         // When human wins
         if (human.score > computer.score) {
             setMessage.textContent = `Congratulations! Human wins.`;
