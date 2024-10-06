@@ -55,18 +55,21 @@ class Human implements Player {
       case 'rock':
         console.log('draw');
         updateScore();
+        handleThreeFirst();
         break;
       case 'paper':
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
         break;
       default:
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
     }
   }
 
@@ -86,16 +89,19 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
         break;
       case 'paper':
         console.log('draw');
         updateScore();
+        handleThreeFirst();
         break;
       default:
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
     }
   }
 
@@ -115,16 +121,19 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
         break;
       case 'paper':
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        handleThreeFirst();
         break;
       default:
         console.log('draw');
         updateScore();
+        handleThreeFirst();
     }
   }
 }
