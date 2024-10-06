@@ -206,6 +206,18 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
   throw new Error("Attribute 'class' not found.");
 };
 
+const showRandomPicture = (): void => {
+  const randomNum = Math.random();
+
+  if (randomNum >= 0 && randomNum <= 0.33) {
+    rockPicture.showPicture('figure.computer-side img');
+  } else if (randomNum >= 0.33 && randomNum <= 0.66) {
+    paperPicture.showPicture('figure.computer-side img');
+  } else {
+    scissorsPicture.showPicture('figure.computer-side img');
+  }
+}
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 
