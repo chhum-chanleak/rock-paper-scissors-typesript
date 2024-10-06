@@ -46,6 +46,15 @@ header {
   & .btn.scissors {
     background: #170482;
   }
+
+  & button.btn:active {
+    background-color: #aaa9;
+    color: #000;
+  }
+
+  & button.btn:hover {
+    font-weight: 600;
+  }
 }
 
 main {
