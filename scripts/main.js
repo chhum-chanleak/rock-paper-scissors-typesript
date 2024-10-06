@@ -24,6 +24,8 @@ class Human {
         // Show a picture of rock on human side
         rockPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
+        // Show a random picture on computer side
+        pictureMethods.showPictureByChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -45,6 +47,8 @@ class Human {
         // Show a picture of paper on human side
         paperPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
+        // Show a random picture on computer side
+        pictureMethods.showPictureByChoice();
         console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -66,6 +70,8 @@ class Human {
         // Show a picture of scissors on human side
         scissorsPicture.showPicture("figure.human-side img");
         const computerChoice = computer.getRandomChoice();
+        // Show a random picture on computer side
+        pictureMethods.showPictureByChoice();
         console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -188,6 +194,7 @@ const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
 const paperPicture = new Picture("../assets/paper.webp");
 const scissorsPicture = new Picture("../assets/scissors.webp");
+const pictureMethods = new Picture("");
 // Buttons
 var myButtons;
 (function (myButtons) {
