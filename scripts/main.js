@@ -223,7 +223,7 @@ const handleSetMessage = () => {
         }
         // When computer wins 
         else {
-            setMessage.textContent = `Congratulations! Computer wins.`;
+            setMessage.textContent = `Try again! Computer wins.`;
         }
     }
 };
