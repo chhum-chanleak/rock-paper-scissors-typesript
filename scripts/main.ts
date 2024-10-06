@@ -221,6 +221,7 @@ class Picture {
     destination.src = this._url;
   }
 
+  // Show picture on the computer side according to the 'computer.choice'.
   showPictureByChoice = (): void => {  
     if (computer.choice === 'rock') {
       rockPicture.showPicture('figure.computer-side img');

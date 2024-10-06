@@ -163,6 +163,7 @@ class Button {
 }
 class Picture {
     constructor(url) {
+        // Show picture on the computer side according to the 'computer.choice'.
         this.showPictureByChoice = () => {
             if (computer.choice === 'rock') {
                 rockPicture.showPicture('figure.computer-side img');
