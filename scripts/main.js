@@ -44,7 +44,7 @@ class Human {
     handlePaper() {
         // Show a picture of paper on human side
         paperPicture.showPicture("figure.human-side img");
-        const computerChoice = getRandomChoice();
+        const computerChoice = computer.getRandomChoice();
         console.log(`H: paper   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -65,7 +65,7 @@ class Human {
     handleScissors() {
         // Show a picture of scissors on human side
         scissorsPicture.showPicture("figure.human-side img");
-        const computerChoice = getRandomChoice();
+        const computerChoice = computer.getRandomChoice();
         console.log(`H: scissors   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -86,6 +86,7 @@ class Human {
 class Computer {
     constructor(score) {
         this._choice = "";
+        // Generate random choice(rock, paper, or scissor)
         this.getRandomChoice = () => {
             const randomNum = Math.random();
             if (randomNum >= 0 && randomNum <= 0.33) {
@@ -138,21 +139,6 @@ class Picture {
         destination.src = this._url;
     }
 }
-// Generate random choice(rock, paper, or scissor)
-const getRandomChoice = () => {
-    let choice;
-    const randomNum = Math.random();
-    if (randomNum >= 0 && randomNum <= 0.33) {
-        choice = 'rock';
-    }
-    else if (randomNum >= 0.33 && randomNum <= 0.66) {
-        choice = 'paper';
-    }
-    else {
-        choice = 'scissors';
-    }
-    return choice;
-};
 // Show both players' score
 const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
 // Apply a click event to

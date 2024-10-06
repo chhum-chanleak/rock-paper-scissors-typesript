@@ -45,7 +45,7 @@ class Human implements Player {
     // Show a picture of rock on human side
     rockPicture.showPicture("figure.human-side img");
 
-    const computerChoice = getRandomChoice();
+    const computerChoice = computer.getRandomChoice();
 
     console.log(`H: rock   vs   C: ${computerChoice}`);
 
@@ -70,7 +70,7 @@ class Human implements Player {
     // Show a picture of paper on human side
     paperPicture.showPicture("figure.human-side img");
 
-    const computerChoice = getRandomChoice();
+    const computerChoice = computer.getRandomChoice();
 
     console.log(`H: paper   vs   C: ${computerChoice}`);
 
@@ -95,7 +95,7 @@ class Human implements Player {
     // Show a picture of scissors on human side
     scissorsPicture.showPicture("figure.human-side img");
 
-    const computerChoice = getRandomChoice();
+    const computerChoice = computer.getRandomChoice();
 
     console.log(`H: scissors   vs   C: ${computerChoice}`);
 
