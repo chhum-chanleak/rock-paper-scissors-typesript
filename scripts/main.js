@@ -31,6 +31,7 @@ class Human {
             case 'rock':
                 console.log('draw');
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             case 'paper':
@@ -38,6 +39,7 @@ class Human {
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             default:
@@ -45,6 +47,7 @@ class Human {
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
         }
     }
@@ -61,11 +64,13 @@ class Human {
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             case 'paper':
                 console.log('draw');
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             default:
@@ -73,6 +78,7 @@ class Human {
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
         }
     }
@@ -89,6 +95,7 @@ class Human {
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             case 'paper':
@@ -96,11 +103,13 @@ class Human {
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
+                hideButtons();
                 handleSetMessage();
                 break;
             default:
                 console.log('draw');
                 updateScore();
+                hideButtons();
                 handleSetMessage();
         }
     }

@@ -55,6 +55,7 @@ class Human implements Player {
       case 'rock':
         console.log('draw');
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       case 'paper':
@@ -62,6 +63,7 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       default:
@@ -69,6 +71,7 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
     }
   }
@@ -89,11 +92,13 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       case 'paper':
         console.log('draw');
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       default:
@@ -101,6 +106,7 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
     }
   }
@@ -121,6 +127,7 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       case 'paper':
@@ -128,11 +135,13 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
+        hideButtons();
         handleSetMessage();
         break;
       default:
         console.log('draw');
         updateScore();
+        hideButtons();
         handleSetMessage();
     }
   }
