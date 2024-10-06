@@ -31,21 +31,21 @@ class Human {
             case 'rock':
                 console.log('draw');
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             case 'paper':
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             default:
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
         }
     }
     handlePaper() {
@@ -61,19 +61,19 @@ class Human {
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             case 'paper':
                 console.log('draw');
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             default:
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
         }
     }
     handleScissors() {
@@ -89,19 +89,19 @@ class Human {
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             case 'paper':
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
                 break;
             default:
                 console.log('draw');
                 updateScore();
-                handleThreeFirst();
+                handleSetMessage();
         }
     }
 }
@@ -201,7 +201,7 @@ const updateScore = () => {
     computerSpanValue.textContent = `${computer.score}`;
 };
 // Show a congratulations message when either one of the player's is 3
-const handleThreeFirst = () => {
+const handleSetMessage = () => {
     const setMessage = document.querySelector('.set-message');
     if (human.score === 3 || computer.score === 3) {
         // When human wins

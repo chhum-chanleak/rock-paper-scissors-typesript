@@ -55,21 +55,21 @@ class Human implements Player {
       case 'rock':
         console.log('draw');
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       case 'paper':
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       default:
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
     }
   }
 
@@ -89,19 +89,19 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       case 'paper':
         console.log('draw');
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       default:
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
     }
   }
 
@@ -121,19 +121,19 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       case 'paper':
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
         break;
       default:
         console.log('draw');
         updateScore();
-        handleThreeFirst();
+        handleSetMessage();
     }
   }
 }
@@ -256,7 +256,7 @@ const updateScore = (): void => {
 };
 
 // Show a congratulations message when either one of the player's is 3
-const handleThreeFirst = (): void => {
+const handleSetMessage = (): void => {
   const setMessage = document.querySelector('.set-message') as Element;
 
   if (human.score === 3 || computer.score === 3) {
