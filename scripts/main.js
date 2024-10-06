@@ -31,19 +31,21 @@ class Human {
             case 'rock':
                 console.log('draw');
                 updateScore();
+                handleThreeFirst();
                 break;
             case 'paper':
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
+                handleThreeFirst();
                 break;
             default:
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
-                break;
+                handleThreeFirst();
         }
     }
     handlePaper() {
@@ -59,17 +61,19 @@ class Human {
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
+                handleThreeFirst();
                 break;
             case 'paper':
                 console.log('draw');
                 updateScore();
+                handleThreeFirst();
                 break;
             default:
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
-                break;
+                handleThreeFirst();
         }
     }
     handleScissors() {
@@ -85,12 +89,14 @@ class Human {
                 computer.increaseScore();
                 showPlayersScore();
                 updateScore();
+                handleThreeFirst();
                 break;
             case 'paper':
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
                 updateScore();
+                handleThreeFirst();
                 break;
             default:
                 console.log('draw');
@@ -192,6 +198,19 @@ const updateScore = () => {
     const computerSpanValue = document.querySelector('span.computer-score > span.value');
     humanSpanValue.textContent = `${human.score}`;
     computerSpanValue.textContent = `${computer.score}`;
+};
+const handleThreeFirst = () => {
+    const setMessage = document.querySelector('.set-message');
+    if (human.score === 3 || computer.score === 3) {
+        // When human wins
+        if (human.score > computer.score) {
+            setMessage.textContent = `Congratulations! Human wins.`;
+        }
+        // When computer wins 
+        else {
+            setMessage.textContent = `Congratulations! Computer wins.`;
+        }
+    }
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);

@@ -248,6 +248,21 @@ const updateScore = (): void => {
   computerSpanValue.textContent = `${computer.score}`;
 };
 
+const handleThreeFirst = (): void => {
+  const setMessage = document.querySelector('.set-message') as Element;
+
+  if (human.score === 3 || computer.score === 3) {
+    // When human wins
+    if (human.score > computer.score) {
+      setMessage.textContent = `Congratulations! Human wins.`;
+    }
+    // When computer wins 
+    else {
+      setMessage.textContent = `Congratulations! Computer wins.`;
+    }
+  }
+};
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 
