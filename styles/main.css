@@ -87,6 +87,21 @@ main {
       justify-content: space-between;
     }
   }
+
+  & .btn.restart {
+    background-color: #37be09;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  & .btn.restart:active {
+    background-color: #aaa9;
+    color: #000;
+  }
+
+  & .btn.restart:hover {
+    font-weight: 600;
+  }
 }
 
 footer {
