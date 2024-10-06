@@ -42,7 +42,7 @@ class Human implements Player {
   }
 
   handleRock(): void {
-    // Show picture of rock on human side
+    // Show a picture of rock on human side
     rockPicture.showPicture("figure.human-side img");
 
     const computerChoice = getRandomChoice();
@@ -67,7 +67,7 @@ class Human implements Player {
   }
 
   handlePaper(): void {
-    // Show picture of paper on human side
+    // Show a picture of paper on human side
     paperPicture.showPicture("figure.human-side img");
 
     const computerChoice = getRandomChoice();
@@ -92,7 +92,7 @@ class Human implements Player {
   }
 
   handleScissors(): void {
-    // Show picture of scissors on human side
+    // Show a picture of scissors on human side
     scissorsPicture.showPicture("figure.human-side img");
 
     const computerChoice = getRandomChoice();

@@ -21,7 +21,7 @@ class Human {
         this._score += 1;
     }
     handleRock() {
-        // Show picture of rock on human side
+        // Show a picture of rock on human side
         rockPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
@@ -42,7 +42,7 @@ class Human {
         }
     }
     handlePaper() {
-        // Show picture of paper on human side
+        // Show a picture of paper on human side
         paperPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: paper   vs   C: ${computerChoice}`);
@@ -63,7 +63,7 @@ class Human {
         }
     }
     handleScissors() {
-        // Show picture of scissors on human side
+        // Show a picture of scissors on human side
         scissorsPicture.showPicture("figure.human-side img");
         const computerChoice = getRandomChoice();
         console.log(`H: scissors   vs   C: ${computerChoice}`);
@@ -153,6 +153,18 @@ const addClickEvent = (node) => {
         }
     }
     throw new Error("Attribute 'class' not found.");
+};
+const showRandomPicture = () => {
+    const randomNum = Math.random();
+    if (randomNum >= 0 && randomNum <= 0.33) {
+        rockPicture.showPicture('figure.computer-side img');
+    }
+    else if (randomNum >= 0.33 && randomNum <= 0.66) {
+        paperPicture.showPicture('figure.computer-side img');
+    }
+    else {
+        scissorsPicture.showPicture('figure.computer-side img');
+    }
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
