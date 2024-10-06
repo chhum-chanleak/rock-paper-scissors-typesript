@@ -67,7 +67,6 @@ class Human implements Player {
         human.increaseScore();
         showPlayersScore();
         updateScore();
-        break;
     }
   }
 
@@ -97,7 +96,6 @@ class Human implements Player {
         computer.increaseScore();
         showPlayersScore();
         updateScore();
-        break;
     }
   }
 
