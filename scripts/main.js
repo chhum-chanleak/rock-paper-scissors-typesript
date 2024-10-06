@@ -158,7 +158,7 @@ const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
 const paperPicture = new Picture("../assets/paper.webp");
-const scissorsPicture = new Picture("../assets/scissors.jpg");
+const scissorsPicture = new Picture("../assets/scissors.webp");
 // Buttons
 var myButtons;
 (function (myButtons) {
