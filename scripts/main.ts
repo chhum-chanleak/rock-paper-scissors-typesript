@@ -298,7 +298,19 @@ const removeClickListeners = (...elements: Element[]): void => {
       elements[i].removeEventListener('click', human.handleScissors);
     }
   }
+};
 
+// Hide buttons when game is set.
+const hideButtons = (): void => {
+  const buttons = document.querySelectorAll('header .btn');
+
+  if (isSet()) {
+    for (let i = 0; i < buttons.length; i += 1 ) {
+      const button = buttons[i] as HTMLElement;
+
+      button.style.display = 'none';
+    }
+  }
 };
 
 const human = new Human('Chhum', 0);
