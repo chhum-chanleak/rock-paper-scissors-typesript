@@ -44,11 +44,14 @@ class Human implements Player {
   handleRock(): void {
     // Show a picture of rock on human side
     rockPicture.showPicture("figure.human-side img");
+    pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
 
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
     pictureMethods.showPictureByComputerChoice();
+    // Apply figcaption's textContent according to image
+    pictureMethods.setFigureCaption('figure.computer-side > .figure-caption');
     console.log(`H: rock   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
@@ -79,11 +82,14 @@ class Human implements Player {
   handlePaper(): void {
     // Show a picture of paper on human side
     paperPicture.showPicture("figure.human-side img");
+    pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
 
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
     pictureMethods.showPictureByComputerChoice();
+    // Apply figcaption according to image
+    pictureMethods.setFigureCaption('figure.computer-side > .figure-caption');
     console.log(`H: paper   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
@@ -114,11 +120,14 @@ class Human implements Player {
   handleScissors(): void {
     // Show a picture of scissors on human side
     scissorsPicture.showPicture("figure.human-side img");
+    pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
 
     const computerChoice = computer.getRandomChoice();
 
     // Show a random picture on computer side
     pictureMethods.showPictureByComputerChoice();
+    // Apply figcaption according to image
+    pictureMethods.setFigureCaption('figure.computer-side > .figure-caption');
     console.log(`H: scissors   vs   C: ${computerChoice}`);
 
     switch(computerChoice) {
