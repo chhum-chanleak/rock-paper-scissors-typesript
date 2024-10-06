@@ -200,6 +200,7 @@ const updateScore = () => {
     humanSpanValue.textContent = `${human.score}`;
     computerSpanValue.textContent = `${computer.score}`;
 };
+// Show a congratulations message when either one of the player's is 3
 const handleThreeFirst = () => {
     const setMessage = document.querySelector('.set-message');
     if (human.score === 3 || computer.score === 3) {
