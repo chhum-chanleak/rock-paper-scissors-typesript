@@ -30,16 +30,19 @@ class Human {
         switch (computerChoice) {
             case 'rock':
                 console.log('draw');
+                updateScore();
                 break;
             case 'paper':
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
             default:
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
         }
     }
@@ -55,14 +58,17 @@ class Human {
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
             case 'paper':
                 console.log('draw');
+                updateScore();
                 break;
             default:
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
         }
     }
@@ -78,14 +84,17 @@ class Human {
                 console.log('Computer wins.');
                 computer.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
             case 'paper':
                 console.log('Human wins.');
                 human.increaseScore();
                 showPlayersScore();
+                updateScore();
                 break;
             default:
                 console.log('draw');
+                updateScore();
         }
     }
 }
@@ -156,6 +165,13 @@ class Picture {
         destination.src = this._url;
     }
 }
+// Update players' score on the '.ring'
+const updateScore = () => {
+    const humanSpanValue = document.querySelector('span.human-score > span.value');
+    const computerSpanValue = document.querySelector('span.computer-score > span.value');
+    humanSpanValue.textContent = `${human.score}`;
+    computerSpanValue.textContent = `${computer.score}`;
+};
 // Show both players' score
 const showPlayersScore = () => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
 // Apply a click event to
@@ -176,18 +192,6 @@ const addClickEvent = (node) => {
         }
     }
     throw new Error("Attribute 'class' not found.");
-};
-const showRandomPicture = () => {
-    const randomNum = Math.random();
-    if (randomNum >= 0 && randomNum <= 0.33) {
-        rockPicture.showPicture('figure.computer-side img');
-    }
-    else if (randomNum >= 0.33 && randomNum <= 0.66) {
-        paperPicture.showPicture('figure.computer-side img');
-    }
-    else {
-        scissorsPicture.showPicture('figure.computer-side img');
-    }
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);

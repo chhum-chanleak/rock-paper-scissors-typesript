@@ -54,16 +54,19 @@ class Human implements Player {
     switch(computerChoice) {
       case 'rock':
         console.log('draw');
+        updateScore();
         break;
       case 'paper':
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
       default:
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
     }
   }
@@ -83,14 +86,17 @@ class Human implements Player {
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
       case 'paper':
         console.log('draw');
+        updateScore();
         break;
       default:
         console.log('Computer wins.');
         computer.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
     }
   }
@@ -110,14 +116,17 @@ class Human implements Player {
         console.log('Computer wins.');        
         computer.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
       case 'paper':
         console.log('Human wins.');
         human.increaseScore();
         showPlayersScore();
+        updateScore();
         break;
       default:
         console.log('draw');
+        updateScore();
     }
   }
 }
@@ -259,3 +268,4 @@ namespace myButtons {
 addClickEvent(myButtons.rock.node);
 addClickEvent(myButtons.paper.node);
 addClickEvent(myButtons.scissors.node);
+
