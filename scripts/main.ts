@@ -230,6 +230,15 @@ const addClickEvent = (node: Element): void | ErrorConstructor => {
   throw new Error("Attribute 'class' not found.");
 };
 
+// Update players' score on the '.ring'
+const updateScore = (): void => {
+  const humanSpanValue = document.querySelector('span.human-score > span.value') as Element;
+  const computerSpanValue = document.querySelector('span.computer-score > span.value') as Element;
+
+  humanSpanValue.textContent = `${human.score}`;
+  computerSpanValue.textContent = `${computer.score}`;
+};
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 
