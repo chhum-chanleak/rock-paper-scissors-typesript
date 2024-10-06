@@ -280,6 +280,22 @@ const isSet = (): boolean => {
   return false;
 };
 
+// Remove event listeners from input
+const removeClickListeners = (...elements: Element[]): void => {
+  for (let i = 0; i < elements.length; i += 1) {
+    const elementAttr = elements[i].getAttribute('class') as string;
+
+    if (elementAttr.includes('rock')) {
+      elements[i].removeEventListener('click', human.handleRock);
+    } else if (elementAttr.includes('paper')) {
+      elements[i].removeEventListener('click', human.handlePaper);
+    } else {
+      elements[i].removeEventListener('click', human.handleScissors);
+    }
+  }
+
+};
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 
