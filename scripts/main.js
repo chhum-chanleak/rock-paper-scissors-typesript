@@ -214,6 +214,13 @@ const handleThreeFirst = () => {
         }
     }
 };
+// Check when the game is set
+const isSet = () => {
+    if (human.score === 3 || computer.score === 3) {
+        return true;
+    }
+    return false;
+};
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
