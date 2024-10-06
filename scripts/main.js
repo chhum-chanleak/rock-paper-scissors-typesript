@@ -85,6 +85,7 @@ class Human {
 }
 class Computer {
     constructor(score) {
+        this._choice = "";
         this._score = score;
     }
     get score() {

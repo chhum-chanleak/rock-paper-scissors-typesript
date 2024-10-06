@@ -118,6 +118,7 @@ class Human implements Player {
 
 class Computer {
   _score: number;
+  _choice: string = "";
 
   constructor(score: number) {
     this._score = score;
