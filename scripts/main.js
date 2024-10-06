@@ -23,7 +23,7 @@ class Human {
     handleRock() {
         // Show a picture of rock on human side
         rockPicture.showPicture("figure.human-side img");
-        const computerChoice = getRandomChoice();
+        const computerChoice = computer.getRandomChoice();
         console.log(`H: rock   vs   C: ${computerChoice}`);
         switch (computerChoice) {
             case 'rock':
@@ -86,6 +86,19 @@ class Human {
 class Computer {
     constructor(score) {
         this._choice = "";
+        this.getRandomChoice = () => {
+            const randomNum = Math.random();
+            if (randomNum >= 0 && randomNum <= 0.33) {
+                this._choice = 'rock';
+            }
+            else if (randomNum >= 0.33 && randomNum <= 0.66) {
+                this._choice = 'paper';
+            }
+            else {
+                this._choice = 'scissors';
+            }
+            return this._choice;
+        };
         this._score = score;
     }
     get score() {
@@ -93,6 +106,12 @@ class Computer {
     }
     set score(score) {
         this._score = score;
+    }
+    get choice() {
+        return this._choice;
+    }
+    set choice(choice) {
+        this._choice = choice;
     }
     increaseScore() {
         this._score += 1;

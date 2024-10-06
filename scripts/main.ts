@@ -143,6 +143,20 @@ class Computer {
   increaseScore(): void {
     this._score += 1;
   }
+
+  // Generate random choice(rock, paper, or scissor)
+  getRandomChoice = (): string => {
+    const randomNum = Math.random();
+  
+    if (randomNum >= 0 && randomNum <= 0.33) {
+      this._choice = 'rock';
+    } else if (randomNum >= 0.33 && randomNum <= 0.66) {
+      this._choice = 'paper';
+    } else {
+      this._choice = 'scissors';
+    }
+    return this._choice;
+  };
 }
 
 class Button {
@@ -176,21 +190,6 @@ class Picture {
     destination.src = this._url;
   }
 }
-
-// Generate random choice(rock, paper, or scissor)
-const getRandomChoice = (): string => {
-  let choice: string;
-  const randomNum = Math.random();
-
-  if (randomNum >= 0 && randomNum <= 0.33) {
-    choice = 'rock';
-  } else if (randomNum >= 0.33 && randomNum <= 0.66) {
-    choice = 'paper';
-  } else {
-    choice = 'scissors';
-  }
-  return choice;
-};
 
 // Show both players' score
 const showPlayersScore = (): void => console.log(`Human: ${human.score}     Computer: ${computer.score}`);
