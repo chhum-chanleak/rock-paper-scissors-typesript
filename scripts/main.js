@@ -214,14 +214,13 @@ const handleThreeFirst = () => {
         }
     }
 };
-<<<<<<< Updated upstream
 // Check when the game is set
 const isSet = () => {
     if (human.score === 3 || computer.score === 3) {
         return true;
     }
     return false;
-=======
+};
 // Remove event listeners from input
 const removeClickListeners = (...elements) => {
     for (let i = 0; i < elements.length; i += 1) {
@@ -236,7 +235,6 @@ const removeClickListeners = (...elements) => {
             elements[i].removeEventListener('click', human.handleScissors);
         }
     }
->>>>>>> Stashed changes
 };
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
