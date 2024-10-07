@@ -89,6 +89,11 @@ main {
       width: 90%;
       align-self: center;
     }
+
+    & img {
+      height: auto;
+      width: 100px;
+    }
   }
 
   & .btn.restart {
