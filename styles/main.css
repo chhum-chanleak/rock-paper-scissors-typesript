@@ -85,6 +85,8 @@ main {
     & .row.second {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      width: 80%;
     }
   }
 
