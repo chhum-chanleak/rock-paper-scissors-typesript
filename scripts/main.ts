@@ -387,6 +387,15 @@ const handleDraw = (): void => {
   }, 200);
 };
 
+// Remove a 'draw' message when there is one.
+const removeDrawMessage = (): void => {
+  const drawMessage = document.querySelector('.draw-message') as HTMLElement;
+
+  if (drawMessage.textContent !== '') {
+    drawMessage.textContent = '';
+  }
+};
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 

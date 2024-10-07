@@ -319,6 +319,13 @@ const handleDraw = () => {
         drawMessage.style.color = '#710193';
     }, 200);
 };
+// Remove a 'draw' message when there is one.
+const removeDrawMessage = () => {
+    const drawMessage = document.querySelector('.draw-message');
+    if (drawMessage.textContent !== '') {
+        drawMessage.textContent = '';
+    }
+};
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
