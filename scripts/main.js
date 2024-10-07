@@ -307,6 +307,15 @@ const handleRestartButton = () => {
         location.reload();
     });
 };
+// Show 'draw' message when the game is draw.
+const handleDraw = () => {
+    const drawMessage = document.querySelector('.draw-message');
+    // Only show the message after 0.5 second delay.
+    setTimeout(() => {
+        drawMessage.textContent = 'Game is draw.';
+        drawMessage.style.color = '#710193';
+    }, 200);
+};
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
