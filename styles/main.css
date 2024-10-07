@@ -140,6 +140,15 @@ footer {
   }
 }
 
+button {
+  padding: var(--spacing-padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  width: 140px;
+  color: #fff;
+  font-size: 18px;
+}
+
 /* For iphone 14 Pro Max. */
 @media (max-width: 430px) {
 
