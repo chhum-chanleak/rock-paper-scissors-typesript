@@ -42,6 +42,9 @@ class Human implements Player {
   }
 
   handleRock(): void {
+    // Remove a 'draw' message when there is one.
+    removeDrawMessage();
+
     // Show a picture of rock on human side
     rockPicture.showPicture("figure.human-side img");
     pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
@@ -84,6 +87,9 @@ class Human implements Player {
   }
 
   handlePaper(): void {
+    // Remove a 'draw' message when there is one.
+    removeDrawMessage();
+
     // Show a picture of paper on human side
     paperPicture.showPicture("figure.human-side img");
     pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
@@ -126,6 +132,9 @@ class Human implements Player {
   }
 
   handleScissors(): void {
+    // Remove a 'draw' message when there is one.
+    removeDrawMessage();
+
     // Show a picture of scissors on human side
     scissorsPicture.showPicture("figure.human-side img");
     pictureMethods.setFigureCaption('figure.human-side > .figure-caption');

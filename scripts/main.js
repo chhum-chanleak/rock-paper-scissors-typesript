@@ -21,6 +21,8 @@ class Human {
         this._score += 1;
     }
     handleRock() {
+        // Remove a 'draw' message when there is one.
+        removeDrawMessage();
         // Show a picture of rock on human side
         rockPicture.showPicture("figure.human-side img");
         pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
@@ -59,6 +61,8 @@ class Human {
         }
     }
     handlePaper() {
+        // Remove a 'draw' message when there is one.
+        removeDrawMessage();
         // Show a picture of paper on human side
         paperPicture.showPicture("figure.human-side img");
         pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
@@ -97,6 +101,8 @@ class Human {
         }
     }
     handleScissors() {
+        // Remove a 'draw' message when there is one.
+        removeDrawMessage();
         // Show a picture of scissors on human side
         scissorsPicture.showPicture("figure.human-side img");
         pictureMethods.setFigureCaption('figure.human-side > .figure-caption');
