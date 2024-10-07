@@ -37,6 +37,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleDraw();
                 break;
             case 'paper':
                 console.log('Computer wins.');
@@ -83,6 +84,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleDraw();
                 break;
             default:
                 console.log('Computer wins.');
@@ -129,6 +131,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleDraw();
         }
     }
 }
@@ -307,7 +310,7 @@ const handleRestartButton = () => {
         location.reload();
     });
 };
-// Show 'draw' message when the game is draw.
+// Show a 'draw' message when the game is draw.
 const handleDraw = () => {
     const drawMessage = document.querySelector('.draw-message');
     // Only show the message after 0.5 second delay.

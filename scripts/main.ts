@@ -61,6 +61,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleDraw();
         break;
       case 'paper':
         console.log('Computer wins.');
@@ -111,6 +112,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleDraw();
         break;
       default:
         console.log('Computer wins.');
@@ -161,6 +163,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleDraw();
     }
   }
 }
@@ -373,7 +376,7 @@ const handleRestartButton = (): void => {
   });
 };
 
-// Show 'draw' message when the game is draw.
+// Show a 'draw' message when the game is draw.
 const handleDraw = (): void => {
   const drawMessage = document.querySelector('.draw-message') as HTMLElement;
 
