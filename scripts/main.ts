@@ -348,6 +348,22 @@ const hideButtons = (): void => {
   }
 };
 
+// Apply functionality for 'Restart' button
+const handleRestartButton = (): void => {
+  const restartButton = document.querySelector('.btn.restart') as HTMLElement;
+
+  if (isSet()) {
+    restartButton.style.display = 'inline';
+  }
+
+  restartButton.addEventListener('click', (): void => {
+    // Hide the 'Restart' button
+    restartButton.style.display = 'none';
+    // Reload the page
+    location.reload();
+  });
+};
+
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 

@@ -285,6 +285,19 @@ const hideButtons = () => {
         }
     }
 };
+// Apply functionality for 'Restart' button
+const handleRestartButton = () => {
+    const restartButton = document.querySelector('.btn.restart');
+    if (isSet()) {
+        restartButton.style.display = 'inline';
+    }
+    restartButton.addEventListener('click', () => {
+        // Hide the 'Restart' button
+        restartButton.style.display = 'none';
+        // Reload the page
+        location.reload();
+    });
+};
 const human = new Human('Chhum', 0);
 const computer = new Computer(0);
 const rockPicture = new Picture("../assets/rock.jpg");
