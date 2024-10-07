@@ -66,9 +66,6 @@ main {
   align-items: center;
   margin-bottom: auto;
   justify-content: center;
-  position: relative;
-  /* top: 20px;
-  height: 100vh; */
 
   & .ring {
     border: var(--border);
@@ -96,11 +93,12 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100%;
     }
 
     & img {
-      height: auto;
       width: 100px;
+      height: 80px;
     }
   }
 
