@@ -36,6 +36,7 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             case 'paper':
                 console.log('Computer wins.');
@@ -44,6 +45,7 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             default:
                 console.log('Human wins.');
@@ -52,6 +54,7 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
         }
     }
     handlePaper() {
@@ -72,12 +75,14 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             case 'paper':
                 console.log('draw');
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             default:
                 console.log('Computer wins.');
@@ -86,6 +91,7 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
         }
     }
     handleScissors() {
@@ -106,6 +112,7 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             case 'paper':
                 console.log('Human wins.');
@@ -114,12 +121,14 @@ class Human {
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
                 break;
             default:
                 console.log('draw');
                 updateScore();
                 hideButtons();
                 handleSetMessage();
+                handleRestartButton();
         }
     }
 }

@@ -60,6 +60,7 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       case 'paper':
         console.log('Computer wins.');
@@ -68,6 +69,7 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       default:
         console.log('Human wins.');
@@ -76,6 +78,7 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
     }
   }
 
@@ -100,12 +103,14 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       case 'paper':
         console.log('draw');
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       default:
         console.log('Computer wins.');
@@ -114,6 +119,7 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
     }
   }
 
@@ -138,6 +144,7 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       case 'paper':
         console.log('Human wins.');
@@ -146,12 +153,14 @@ class Human implements Player {
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
         break;
       default:
         console.log('draw');
         updateScore();
         hideButtons();
         handleSetMessage();
+        handleRestartButton();
     }
   }
 }
