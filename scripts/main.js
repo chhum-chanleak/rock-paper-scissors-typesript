@@ -39,7 +39,6 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
-                handleDraw();
                 break;
             case 'paper':
                 console.log('Computer wins.');
@@ -88,7 +87,6 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
-                handleDraw();
                 break;
             default:
                 console.log('Computer wins.');
@@ -137,7 +135,6 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
-                handleDraw();
         }
     }
 }
@@ -317,13 +314,61 @@ const handleRestartButton = () => {
     });
 };
 // Show a 'draw' message when the game is draw.
-const handleDraw = () => {
+const handleGameMessage = (humanChoice, computerChoice) => {
     const drawMessage = document.querySelector('.draw-message');
     // Only show the message after 0.5 second delay.
-    setTimeout(() => {
-        drawMessage.textContent = 'Game is draw.';
-        drawMessage.style.color = '#710193';
-    }, 200);
+    if (humanChoice === 'rock') {
+        if (computerChoice === 'rock') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Draw.';
+            }, 150);
+        }
+        else if (computerChoice === 'paper') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Computer wins.';
+            }, 150);
+        }
+        else {
+            setTimeout(() => {
+                drawMessage.textContent = 'Human wins.';
+            }, 150);
+        }
+    }
+    else if (humanChoice === 'paper') {
+        if (computerChoice === 'rock') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Human wins.';
+            }, 150);
+        }
+        else if (computerChoice === 'paper') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Draw.';
+            }, 150);
+        }
+        else {
+            setTimeout(() => {
+                drawMessage.textContent = 'Computer wins.';
+            }, 150);
+        }
+        // When human choice is 'scissors'
+    }
+    else {
+        if (computerChoice === 'rock') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Computer wins.';
+            }, 150);
+        }
+        else if (computerChoice === 'paper') {
+            setTimeout(() => {
+                drawMessage.textContent = 'Human wins.';
+            }, 150);
+        }
+        else {
+            setTimeout(() => {
+                drawMessage.textContent = 'Draw.';
+            }, 150);
+        }
+    }
 };
 // Remove a 'draw' message when there is one.
 const removeDrawMessage = () => {
