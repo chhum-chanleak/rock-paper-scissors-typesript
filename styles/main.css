@@ -156,6 +156,7 @@ button {
 
     & .ring {
       width: 100vw;
+      height: 30vh;
     }
   }
 
