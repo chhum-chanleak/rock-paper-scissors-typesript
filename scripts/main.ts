@@ -393,7 +393,7 @@ const handleDraw = (): void => {
   setTimeout(() => {
     drawMessage.textContent = 'Game is draw.';
     drawMessage.style.color = '#710193';
-  }, 200);
+  }, 150);
 };
 
 // Remove a 'draw' message when there is one.
