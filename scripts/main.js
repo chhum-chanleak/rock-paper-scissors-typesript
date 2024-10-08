@@ -39,6 +39,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('rock', computer.choice);
                 break;
             case 'paper':
                 console.log('Computer wins.');
@@ -48,6 +49,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('rock', computer.choice);
                 break;
             default:
                 console.log('Human wins.');
@@ -57,6 +59,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('rock', computer.choice);
         }
     }
     handlePaper() {
@@ -80,6 +83,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('paper', computer.choice);
                 break;
             case 'paper':
                 console.log('draw');
@@ -87,6 +91,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('paper', computer.choice);
                 break;
             default:
                 console.log('Computer wins.');
@@ -96,6 +101,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('paper', computer.choice);
         }
     }
     handleScissors() {
@@ -119,6 +125,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('scissors', computer.choice);
                 break;
             case 'paper':
                 console.log('Human wins.');
@@ -128,6 +135,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('scissors', computer.choice);
                 break;
             default:
                 console.log('draw');
@@ -135,6 +143,7 @@ class Human {
                 hideButtons();
                 handleSetMessage();
                 handleRestartButton();
+                handleGameMessage('scissors', computer.choice);
         }
     }
 }

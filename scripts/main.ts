@@ -64,6 +64,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('rock', computer.choice);
         break;
       case 'paper':
         console.log('Computer wins.');
@@ -73,6 +74,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('rock', computer.choice);
         break;
       default:
         console.log('Human wins.');
@@ -82,6 +84,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('rock', computer.choice);
     }
   }
 
@@ -110,6 +113,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('paper', computer.choice);
         break;
       case 'paper':
         console.log('draw');
@@ -117,6 +121,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('paper', computer.choice);
         break;
       default:
         console.log('Computer wins.');
@@ -126,6 +131,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('paper', computer.choice);
     }
   }
 
@@ -154,6 +160,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('scissors', computer.choice);
         break;
       case 'paper':
         console.log('Human wins.');
@@ -163,6 +170,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('scissors', computer.choice);
         break;
       default:
         console.log('draw');
@@ -170,6 +178,7 @@ class Human implements Player {
         hideButtons();
         handleSetMessage();
         handleRestartButton();
+        handleGameMessage('scissors', computer.choice);
     }
   }
 }
